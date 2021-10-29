@@ -1,0 +1,17 @@
+.footer-item {
+    height: 95px;
+    background-color: #031c69;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    position: relative;
+   margin-top: 100vh;
+}
+.footer-item h5 {
+    font-size: 1.3rem;
+}
+.footer-txt {
+    color: #189cf0;
+}
