@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
-import './Addservice.css';
+import './AllBooking.css';
 
-const Addservice = () => {
+const AllBooking = () => {
     return (
         <>
           <div className="service-pack">
@@ -14,4 +14,4 @@ const Addservice = () => {
     );
 };
 
-export default Addservice;
+export default AllBooking;

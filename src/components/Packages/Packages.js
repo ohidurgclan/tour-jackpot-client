@@ -2,9 +2,9 @@ import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import usePackage from '../../hooks/usePackage';
 import Package from '../Subitem/Package/Package';
-import './Services.css';
+import './Packages.css';
 
-const Services = () => {
+const Packages = () => {
       const [packages] = usePackage();
     return (
         <>
@@ -25,4 +25,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default Packages;

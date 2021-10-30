@@ -14,11 +14,11 @@ const Header = () => {
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end nav-bar">
               <Nav.Link as={NavLink} to="/home" activeStyle={{ fontWeight: "bold", color: "#34d1ff" }}>Home</Nav.Link>
-              <Nav.Link as={NavLink} to="/addservice" activeStyle={{fontWeight: "bold",color: "#34d1ff"}}>Add Service</Nav.Link>
-              <Nav.Link as={NavLink} to="/services" activeStyle={{fontWeight: "bold",color: "#34d1ff"}}>Services</Nav.Link>
+              <Nav.Link as={NavLink} to="/packages" activeStyle={{ fontWeight: "bold", color: "#34d1ff" }}>Packages</Nav.Link>
+              <Nav.Link as={NavLink} to="/allBooking" activeStyle={{fontWeight: "bold",color: "#34d1ff"}}>All Booking</Nav.Link>
               <Nav.Link as={NavLink} to="/about" activeStyle={{fontWeight: "bold",color: "#34d1ff"}}>About</Nav.Link>
               <Nav.Link as={NavLink} to="/contact" activeStyle={{ fontWeight: "bold", color: "#34d1ff" }}>Contact</Nav.Link>
-              {users?.email ? <Nav.Link as={NavLink} to="/order" activeStyle={{ fontWeight: "bold", color: "#34d1ff" }}>My Order</Nav.Link> : ''}
+              {users?.email ? <Nav.Link as={NavLink} to="/order" activeStyle={{ fontWeight: "bold", color: "#34d1ff" }}>My Booking</Nav.Link> : ''}
               {users?.email ? <Button onClick={logOut} variant="light">Logout</Button> :
               <Nav.Link as={NavLink} to="/login" activeStyle={{fontWeight: "bold",color: "#1bbde4"}}>Login</Nav.Link>}
               <Navbar.Text className="ms-2 text-light">
