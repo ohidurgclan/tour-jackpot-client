@@ -1,0 +1,10 @@
+.slick-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slick-slide img {
+    display: block;
+    width: 10rem;
+    height: auto;
+}

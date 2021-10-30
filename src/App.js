@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-import './App.css';
 import About from './components/About/About';
+import Addservice from './components/Addservice/Addservice';
 import Contact from './components/Contact/Contact';
 import Home from './components/Home/Home';
 import Notfound from './components/Notfound/Notfound';
@@ -11,6 +10,7 @@ import Footer from './components/Shared/Footer/Footer'
 import Header from './components/Shared/Header/Header';
 import Sign from './components/Signin/Sign';
 import Authprovider from './contexts/Authprovider';
+import './App.css';
 
 function App() {
   
@@ -38,6 +38,9 @@ function App() {
           <Route exact path="/login">
             <Sign></Sign>
           </Route>
+          <Route exact path="/addservice">
+            <Addservice></Addservice>
+          </Route>  
           <Route exact path="*">
             <Notfound></Notfound>
           </Route>
