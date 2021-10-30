@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from './components/About/About';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Addservice from './components/Addservice/Addservice';
 import Contact from './components/Contact/Contact';
 import Home from './components/Home/Home';
@@ -11,6 +12,7 @@ import Header from './components/Shared/Header/Header';
 import Sign from './components/Signin/Sign';
 import Authprovider from './contexts/Authprovider';
 import './App.css';
+import Myorder from './components/Private/Myorders/Myorder';
 
 function App() {
   
@@ -37,10 +39,16 @@ function App() {
           </Route>
           <Route exact path="/login">
             <Sign></Sign>
-          </Route>
-          <Route exact path="/addservice">
+            </Route>
+          <PrivateRoute exact path="/order">
+            <Myorder></Myorder>
+          </PrivateRoute>
+          <PrivateRoute exact path="/addservice">
             <Addservice></Addservice>
-          </Route>  
+          </PrivateRoute>
+          <PrivateRoute exact path="/package/:keyId">
+            <Myorder></Myorder>
+          </PrivateRoute>  
           <Route exact path="*">
             <Notfound></Notfound>
           </Route>

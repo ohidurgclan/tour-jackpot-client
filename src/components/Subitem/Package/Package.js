@@ -16,7 +16,7 @@ const Package = (props) => {
                         <div>
                             <p>{details.slice(0, 120)}</p>
                         </div>
-                    <NavLink to={`/service/${key}`}>
+                    <NavLink to={`/package/${key}`}>
                         <button className="appointment-btn">Details</button>
                     </NavLink>   
                     </div>

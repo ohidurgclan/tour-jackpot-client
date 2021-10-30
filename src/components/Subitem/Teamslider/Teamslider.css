@@ -1,7 +1,6 @@
-.slick-slide {
+.slick-initialized .slick-slide {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 .slick-slide img {
     display: block;
