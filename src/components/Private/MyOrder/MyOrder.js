@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Table } from 'react-bootstrap';
-import './AllBooking.css';
+import useAuth from '../../../hooks/useAuth';
+import './MyOrder.css'
 
-const AllBooking = () => {
-  const [booking, setBooking] = useState([]);
+const MyOrder = () => {
+    const { users } = useAuth();
+    const [order, setOrder] = useState([]);
 
-  const handleUpdate = (id) => {
+    const handleUpdate = (id) => {
     const updateStatus = { status: "Approved" };
     const url = `http://localhost:8030/userpackage/${id}`;
     fetch(url, {
@@ -17,18 +19,21 @@ const AllBooking = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         if (data.modifiedCount) {
-          alert("Updated Succefully");
-          fetch(`http://localhost:8030/userpackage`)
+          alert("Update Succeflly");
+          fetch(
+            `http://localhost:8030/userpackage/${users?.email}`
+          )
             .then((res) => res.json())
             .then((data) => {
-              setBooking(data);
+              setOrder(data);
+              console.log(data);
             });
         }
       });
   };
 
-  // Delete Booking API
   const handleDelete = (id) => {
     const url = `http://localhost:8030/userpackage/${id}`;
     fetch(url, {
@@ -36,29 +41,27 @@ const AllBooking = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         if (data.deletedCount) {
-          alert("Booking Item Deleted");
-          const deleteItem = booking.filter(book => book._id !== id);
-          setBooking(deleteItem);
+          alert("delete Succeflly");
+          const remainItem = order.filter(book => book._id !== id);
+          setOrder(remainItem);
         }
       });
   };
 
-  // load data useEffect
-    useEffect(() => {
-    fetch(`http://localhost:8030/userpackage`)
-      .then((res) => res.json())
-      .then((data) => {
-        setBooking(data);
-      });
-  }, []);
-
-  return (
+  useEffect(() => {
+      fetch(`http://localhost:8030/userpackage/${users?.email}`)
+          .then((res) => res.json())
+          .then((data) => setOrder(data));
+  }, [users]);
+    
+    return (
         <>
           <div className="mt-5rem">
           <Container>
             <Row>
-              <h2>Package Booking Status</h2>
+              <h2>My Booking Packages</h2>
               <Table bordered className="booking-table">
                 <thead>
                   <tr>
@@ -70,15 +73,15 @@ const AllBooking = () => {
                     <th>Cancel Booking</th>
                   </tr>
                 </thead>
-                {booking.map(order => (
-                  <tbody key={order._id}>
+                {order.map(myorder => (
+                  <tbody key={myorder._id}>
                     <tr>
-                      <td>{order.Name}</td>
-                      <td>{order.orderName}</td>
-                      <td>{order.Mobile}</td>
-                      <td>{order.status}</td>
-                      <td><button onClick={() => handleUpdate(order._id)} className="appointment-btn">Approve</button></td>
-                      <td><button className="appointment-btn" onClick={() => handleDelete(order._id)}>Cancel</button></td>
+                      <td>{myorder.Name}</td>
+                      <td>{myorder.orderName}</td>
+                      <td>{myorder.Mobile}</td>
+                      <td>{myorder.status}</td>
+                      <td><button onClick={() => handleUpdate(myorder._id)} className="appointment-btn">Approve</button></td>
+                      <td><button className="appointment-btn" onClick={() => handleDelete(myorder._id)}>Cancel</button></td>
                     </tr>
                   </tbody>
                 ))}
@@ -90,4 +93,4 @@ const AllBooking = () => {
     );
 };
 
-export default AllBooking;
+export default MyOrder;

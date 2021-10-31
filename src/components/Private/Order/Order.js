@@ -3,35 +3,35 @@ import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
 import useFirebase from '../../../hooks/useFirebase';
+import usePackage from '../../../hooks/usePackage';
 import './Order.css';
 
 
-const Order = (props) => {    
-    const { users } = useFirebase();
-    const { orderData } = useParams();
-    const [data, setData] = useState([]);
-    useEffect(() => {
-    fetch("http://localhost:8030/package")
-      .then((res) => res.json())
-      .then((data) => setData(data));
-    }, []);
-    const orderItem = data.filter(singleData => singleData === orderData);
+const Order = () => {    
+  const { users } = useFirebase();
+  console.log(users.email)
+    const { packageKey } = useParams();
+  const [packages] = usePackage();
+  const [order, setOrder] = useState({});
+  useEffect(() => {
+      const orderItem = packages.find(orderData => orderData.key === packageKey);
+    setOrder(orderItem);
+  }, [packages])
+  console.log(order)
     const { register, handleSubmit, reset } = useForm();
-    const onSubmit = (data) =>
-    {
+    const onSubmit = (data) => {
         data.email = users?.email;
-        data.orderName = orderItem?.name;
-        data.orderImg = orderItem?.img;
-        data.details = orderItem?.details;
-        data.orderPrice = orderItem?.price;
+        data.orderName = order?.name;
+        data.orderImg = order?.img;
+        data.details = order?.details;
+        data.orderPrice = order?.price;
         data.status = "Pending";
         axios
-            .post("http://localhost:8030/package", data)
+            .post("http://localhost:8030/userpackage", data)
             .then((res) =>
             {
-                if (res.data.key)
+                if (res.data)
                 {
                     alert("Successfully Registard");
                     reset();
@@ -41,13 +41,15 @@ const Order = (props) => {
 
     return (
         <>
-          <Container>
+      <Container>
         <Row>
           <Col className="my-5" md={6}>
-            <h3>Events Name : {orderItem?.name}</h3>
-            <img className="img-fluid my-3" src={orderItem?.img} alt="" />
-            <h3> Price : {orderItem?.price}</h3>
-            <p>description : {orderItem?.description}</p>
+            <h3>Package Name : {order?.name}</h3>
+              <img className="img img-fluid w-75 my-3" src={order?.img} alt="" />
+              <h3>Rating : {order?.star}</h3>
+              <h3> Price : {order?.price}</h3>
+              <h4>Details</h4>
+            <p>{order?.details}</p>
           </Col>
           <Col md={6} className="mt-5 d-flex">
             <div className="add-reg-form">

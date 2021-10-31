@@ -18,7 +18,7 @@ const Header = () => {
               <Nav.Link as={NavLink} to="/allBooking" activeStyle={{fontWeight: "bold",color: "#34d1ff"}}>All Booking</Nav.Link>
               <Nav.Link as={NavLink} to="/about" activeStyle={{fontWeight: "bold",color: "#34d1ff"}}>About</Nav.Link>
               <Nav.Link as={NavLink} to="/contact" activeStyle={{ fontWeight: "bold", color: "#34d1ff" }}>Contact</Nav.Link>
-              {users?.email ? <Nav.Link as={NavLink} to="/order" activeStyle={{ fontWeight: "bold", color: "#34d1ff" }}>My Booking</Nav.Link> : ''}
+              {users?.email ? <Nav.Link as={NavLink} to="/myBooking" activeStyle={{ fontWeight: "bold", color: "#34d1ff" }}>My Booking</Nav.Link> : ''}
               {users?.email ? <Button onClick={logOut} variant="light">Logout</Button> :
               <Nav.Link as={NavLink} to="/login" activeStyle={{fontWeight: "bold",color: "#1bbde4"}}>Login</Nav.Link>}
               <Navbar.Text className="ms-2 text-light">

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from './components/About/About';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-import Addservice from './components/AllBooking/AllBooking';
+import AllBooking from './components/AllBooking/AllBooking';
 import Contact from './components/Contact/Contact';
 import Home from './components/Home/Home';
 import Notfound from './components/Notfound/Notfound';
@@ -11,9 +11,9 @@ import Footer from './components/Shared/Footer/Footer'
 import Header from './components/Shared/Header/Header';
 import Sign from './components/Signin/Sign';
 import Authprovider from './contexts/Authprovider';
-import './App.css';
-import Myorder from './components/Private/Myorders/Myorder';
 import Order from './components/Private/Order/Order';
+import './App.css';
+import MyOrder from './components/Private/MyOrder/MyOrder';
 
 function App() {
   
@@ -41,12 +41,15 @@ function App() {
           <Route exact path="/login">
             <Sign></Sign>
             </Route>
-          <PrivateRoute exact path="/addservice">
-            <Addservice></Addservice>
-          </PrivateRoute>
-          <PrivateRoute exact path="/package/:key">
+          <Route exact path="/allBooking">
+            <AllBooking></AllBooking>
+          </Route>
+          <PrivateRoute exact path="/package/:packageKey">
             <Order></Order>
-          </PrivateRoute>  
+          </PrivateRoute>
+          <PrivateRoute exact path="/myBooking">
+            <MyOrder></MyOrder>
+          </PrivateRoute>    
           <Route exact path="*">
             <Notfound></Notfound>
           </Route>
