@@ -6,11 +6,9 @@
     justify-content: center;
     align-items: center;
     font-weight: 600;
-    position: relative;
-    margin-top: 10vh;
 }
 .footer-item h5 {
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 .footer-txt {
     color: #189cf0;

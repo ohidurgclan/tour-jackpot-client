@@ -20,4 +20,5 @@
 }
 .service-info div {
     height: 5.5rem;
+    overflow: auto;
 }

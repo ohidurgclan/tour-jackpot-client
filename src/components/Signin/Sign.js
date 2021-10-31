@@ -90,7 +90,7 @@ const Sign = () => {
                     <br />
                     <h4 className="text-center">-------------------------------------OR-------------------------------------</h4>
                     <br />
-                        <button onClick={handleGoogleLogin} className="appointment-btn mb-5 mt-5">Login With Google</button>
+                        <button onClick={handleGoogleLogin} className="appointment-btn mb-5 mt-5 w-25">Login With Google</button>
                 </Row>
             </Container>
             

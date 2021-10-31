@@ -18,8 +18,8 @@ const Slider = () => {
                   alt="First slide"
                 />
                 <Carousel.Caption>
-                  <h2 className="slider-h2">The Agency You Trust to</h2>
-                  <h4 className="slider-h4">Care For Your Journey</h4>
+                  <h1>The Agency You Trust to</h1>
+                  <h2>Care For Your Journey</h2>
                 </Carousel.Caption>
               </Carousel.Item>
               {/* Slide 2 */}
@@ -30,8 +30,8 @@ const Slider = () => {
                   alt="Second slide"
                 />
                 <Carousel.Caption>
-                <h2 className="slider-h2">A Good Deal of The Futute</h2>
-                <h4 className="slider-h4">Relaxness & Health Care</h4>    
+                <h1>A Good Deal of The Futute</h1>
+                <h2>Relaxness & Health Care</h2>    
                 </Carousel.Caption>
                 </Carousel.Item>
               {/* Slide 3 */}
@@ -42,8 +42,8 @@ const Slider = () => {
                   alt="Second slide"
                 />
                 <Carousel.Caption>
-                <h2 className="slider-h2">Best Holiday Deals</h2>
-                <h4 className="slider-h4">For Couple</h4>    
+                <h1>Best Holiday Deals</h1>
+                <h2>For Couple</h2>    
                 </Carousel.Caption>
               </Carousel.Item>
               {/* Slide 4 */}
@@ -54,8 +54,8 @@ const Slider = () => {
                   alt="Second slide"
                 />
                 <Carousel.Caption>
-                <h2 className="slider-h2">The Great Place for</h2>
-                <h4 className="slider-h4">Physical Relaxness</h4>    
+                <h1>The Great Place for</h1>
+                <h2>Physical Relaxness</h2>    
                 </Carousel.Caption>
               </Carousel.Item>
           </Carousel>

@@ -1,7 +1,7 @@
 .appointment-btn {
     display: inline-block;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
@@ -14,6 +14,7 @@
     color: #fff;
     background-color: #189cf0;
     border-color: #189cf0;
+    position: relative;
 }
 @keyframes App-logo-spin {
   from {
