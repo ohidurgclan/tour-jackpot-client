@@ -11,8 +11,8 @@ const Package = (props) => {
                 <div className="service-card w-100">
                     <img className="img img-fluid card-imgs" src={img} alt="" />
                     <div className="service-info">
-                        <h3 className="fw-bold">{name}</h3>
-                        <h4>Price: <span className="fw-bold">${price}</span></h4>
+                        <h4 className="fw-bold">{name}</h4>
+                        <h5>Price: <span className="fw-bold">${price}</span></h5>
                         <div>
                             <p>{details.slice(0, 120)}</p>
                         </div>

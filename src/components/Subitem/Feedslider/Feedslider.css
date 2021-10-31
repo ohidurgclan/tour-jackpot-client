@@ -18,6 +18,8 @@
 }
 .fs-caption {
     bottom: 9rem !important;
+    text-align: center;
+    left: 16%;
 }
 .fs-img {
   border-radius: 50%;
