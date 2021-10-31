@@ -9,7 +9,6 @@ import img4 from '../../../images/team/team-4.jpg';
 import img5 from '../../../images/team/team-5.jpg';
 import img6 from '../../../images/team/team-6.jpg';
 import './Teamslider.css';
-import { Container, Row } from "react-bootstrap";
 export default class AutoPlayMethods extends Component {
   constructor(props) {
     super(props);
@@ -24,7 +23,6 @@ export default class AutoPlayMethods extends Component {
   }
   render() {
     const settings = {
-      dots: true,
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -32,37 +30,40 @@ export default class AutoPlayMethods extends Component {
       autoplaySpeed: 2000
     };
     return (
-        <Container>
-            <Row>
-
-                <Slider ref={slider => (this.slider = slider)} {...settings}>
-                    <div>
-                        <img src={img1} alt="" />         
-                        <h3>1</h3>
-                    </div>
-                    <div>
-                        <img src={img2} alt="" />
-                        <h3>2</h3>
-                    </div>
-                    <div>
-                        <img src={img3} alt="" />
-                        <h3>3</h3>
-                    </div>
-                    <div>
-                        <img src={img4} alt="" />
-                        <h3>4</h3>
-                    </div>
-                    <div>
-                        <img src={img5} alt="" />
-                        <h3>5</h3>
-                    </div>
-                    <div>
-                        <img src={img6} alt="" />
-                        <h3>6</h3>
-                    </div>
-                </Slider>
-            </Row>
-      </Container>
+      <>
+        <Slider className="team-slider" ref={slider => (this.slider = slider)} {...settings}>
+            <div>
+                <img src={img1} alt="" />         
+                <h3 className="text-center fw-bold mt-3">Lawra Adam</h3>
+                <h5 className="text-center fw-bold">CEO</h5>
+            </div>
+            <div>
+                <img src={img2} alt="" />
+                <h3 className="text-center fw-bold mt-3">Anthony Clark</h3>
+                <h5 className="text-center fw-bold">Product Manager</h5>
+            </div>
+            <div>
+                <img src={img3} alt="" />
+                <h3 className="text-center fw-bold mt-3">Gennila Genny</h3>
+                <h5 className="text-center fw-bold">Tour Guide</h5>
+            </div>
+            <div>
+                <img src={img4} alt="" />
+                <h3 className="text-center fw-bold mt-3">Ade Gauthier</h3>
+                <h5 className="text-center fw-bold">Tour Guide</h5>
+            </div>
+            <div>
+                <img src={img5} alt="" />
+                <h3 className="text-center fw-bold mt-3">Addie Galtero</h3>
+                <h5 className="text-center fw-bold">Tour Guide</h5>
+            </div>
+            <div>
+                <img src={img6} alt="" />
+                <h3 className="text-center fw-bold mt-3">Emma Lane</h3>
+                <h5 className="text-center fw-bold">Senior Advisor</h5>
+            </div>
+        </Slider>
+      </>
     );
   }
 }

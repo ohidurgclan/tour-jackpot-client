@@ -1,0 +1,38 @@
+.feed-bg {
+  background-image: url("../../../images/feedback.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 36rem;
+  margin-bottom: 3rem;
+  margin-top: -1rem;
+}
+.feed-bg h5 {
+  color: #189cf0;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+.f-slide {
+  height: 28rem;
+  margin-top: 10rem;
+  border-radius: 6px;
+}
+.fs-caption {
+    text-align: center !important;
+    bottom: 8rem !important;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+.fs-img {
+  border-radius: 50%;
+  border: 6px solid #031c69;
+  margin-top: -5rem;
+}
+.feed-bg p {
+  color: #031c69;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+}
+.carousel-indicators button {
+  background-color: #189cf0 !important;
+}
