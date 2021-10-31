@@ -16,7 +16,7 @@ const Feedslider = () => {
                     alt="First slide"
                     />
                     <Carousel.Caption className="fs-caption">
-                        <p>I appreciate your hospital really good environment and excellent patient care.Extremely qualified doctors with a humane approach towards patients. You are continuously handle patient treatment wonderfully. Thanks for your great service. Please enjoy the chocolates.</p>
+                        <p>I recently used Audley Travel for a trip to Australia and New Zealand. The destination is great. Regarding Audley, the hotels and most excursions were good. However, you choose a travel agency for help with the logistics--easy directions, smooth travel, etc.</p>
                         <h5>Maria Rusconi</h5>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -27,7 +27,7 @@ const Feedslider = () => {
                     alt="Second slide"
                     />
                     <Carousel.Caption className="fs-caption">
-                        <p>Thanks to everyone its such a grt hospitalGood maintainence of rooms. Nice geusture by nursing staff. Overall had a very good experience and feel at home.Wish the team a Grand Success, a bright future and good speed. Good job. Cheers..!</p>
+                        <p>We recently used Winter Park Escapes to book a property. The property was in a total state of disrepair and we had to call maintenance FIVE times. When we complained, they offered to refund 1/2 of one day. Don’t use Winter Park Escapes!</p>
                         <h5>Richard William</h5>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -38,7 +38,7 @@ const Feedslider = () => {
                     alt="Third slide"
                     />
                     <Carousel.Caption className="fs-caption">
-                        <p>I am very thankful to this hospital and Dr. Justin Beckham for curing my father’s health problem with his skillful treatment.I really appreciate all the doctors and nursing staff for their commitment. Atmosphere of hospital in always pin drop silence.</p>
+                        <p>I always a little nervous about booking a trip on line but everything worked out perfect. We were picked up at our hotel promptly and they arrived with a large Mercedes Benz caravan to take us to Siem Reap. The ride was conformable and in the heat the air conditioner was very powerful.</p>
                         <h5>Amanda Kinedy</h5>
                     </Carousel.Caption>
                 </Carousel.Item>
