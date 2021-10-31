@@ -7,7 +7,7 @@ const AllBooking = () => {
 
   const handleUpdate = (id) => {
     const updateStatus = { status: "Approved" };
-    const url = `http://localhost:8030/userpackage/${id}`;
+    const url = `https://howling-citadel-94409.herokuapp.com/userpackage/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -19,7 +19,7 @@ const AllBooking = () => {
       .then((data) => {
         if (data.modifiedCount) {
           alert("Updated Succefully");
-          fetch(`http://localhost:8030/userpackage`)
+          fetch(`https://howling-citadel-94409.herokuapp.com/userpackage`)
             .then((res) => res.json())
             .then((data) => {
               setBooking(data);
@@ -30,7 +30,7 @@ const AllBooking = () => {
 
   // Delete Booking API
   const handleDelete = (id) => {
-    const url = `http://localhost:8030/userpackage/${id}`;
+    const url = `https://howling-citadel-94409.herokuapp.com/userpackage/${id}`;
     fetch(url, {
       method: "DELETE",
     })
@@ -46,7 +46,7 @@ const AllBooking = () => {
 
   // load data useEffect
     useEffect(() => {
-    fetch(`http://localhost:8030/userpackage`)
+    fetch(`https://howling-citadel-94409.herokuapp.com/userpackage`)
       .then((res) => res.json())
       .then((data) => {
         setBooking(data);

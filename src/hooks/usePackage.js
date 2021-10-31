@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 const usePackage = () => {
     const [packages, setPackages] = useState([]);
     useEffect(()=> {
-        fetch('http://localhost:8030/package')
+        fetch('https://howling-citadel-94409.herokuapp.com/package')
         .then(res => res.json())
         .then(data => setPackages(data))
     }, [])

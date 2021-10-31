@@ -9,7 +9,7 @@ const MyOrder = () => {
 
     const handleUpdate = (id) => {
     const updateStatus = { status: "Approved" };
-    const url = `http://localhost:8030/userpackage/${id}`;
+    const url = `https://howling-citadel-94409.herokuapp.com/userpackage/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -23,7 +23,7 @@ const MyOrder = () => {
         if (data.modifiedCount) {
           alert("Update Succeflly");
           fetch(
-            `http://localhost:8030/userpackage/${users?.email}`
+            `https://howling-citadel-94409.herokuapp.com/userpackage/${users?.email}`
           )
             .then((res) => res.json())
             .then((data) => {
@@ -35,7 +35,7 @@ const MyOrder = () => {
   };
 
   const handleDelete = (id) => {
-    const url = `http://localhost:8030/userpackage/${id}`;
+    const url = `https://howling-citadel-94409.herokuapp.com/userpackage/${id}`;
     fetch(url, {
       method: "DELETE",
     })
@@ -51,7 +51,7 @@ const MyOrder = () => {
   };
 
   useEffect(() => {
-      fetch(`http://localhost:8030/userpackage/${users?.email}`)
+      fetch(`https://howling-citadel-94409.herokuapp.com/userpackage/${users?.email}`)
           .then((res) => res.json())
           .then((data) => setOrder(data));
   }, [users]);

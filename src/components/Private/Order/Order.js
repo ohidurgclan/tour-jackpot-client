@@ -28,7 +28,7 @@ const Order = () => {
         data.orderPrice = order?.price;
         data.status = "Pending";
         axios
-            .post("http://localhost:8030/userpackage", data)
+            .post("https://howling-citadel-94409.herokuapp.com/userpackage", data)
             .then((res) =>
             {
                 if (res.data)
