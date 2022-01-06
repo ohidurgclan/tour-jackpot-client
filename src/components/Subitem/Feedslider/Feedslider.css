@@ -7,7 +7,7 @@
   margin-top: -1rem;
 }
 .feed-bg h5 {
-  color: #189cf0;
+  color: #ff1654;
   font-weight: 700;
   margin-top: 2rem;
 }
@@ -17,20 +17,20 @@
   border-radius: 6px;
 }
 .fs-caption {
-    bottom: 9rem !important;
-    text-align: center;
-    left: 16%;
+  bottom: 9rem !important;
+  text-align: center;
+  left: 16%;
 }
 .fs-img {
   border-radius: 50%;
-  border: 6px solid #031c69;
+  border: 6px solid #0084ff;
   margin-top: -5rem;
 }
 .feed-bg p {
-  color: #031c69;
+  color: #0084ff;
   font-weight: 600;
   margin-top: 1.5rem;
 }
 .carousel-indicators button {
-  background-color: #189cf0 !important;
+  background-color: #ff1654 !important;
 }

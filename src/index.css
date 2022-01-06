@@ -8,14 +8,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-h1 {
-  font-size: 72px;
-  font-weight: 700;
-}
-h2 {
-  font-size: 54px;
-  font-weight: 700;
-}
 h3 {
   font-size: 40px;
   font-weight: 600;

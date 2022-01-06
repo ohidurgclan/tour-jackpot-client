@@ -1,29 +1,29 @@
 .slick-initialized .slick-slide {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
-.team-slider  img {
-    height: 15rem;
-    width: 15rem;
-    border-radius: 50%;
-    border: 7px solid #031c69;
+.team-slider img {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  border: 7px solid #0084ff;
 }
 .team-slider {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 .team-slider h3 {
-    color:#031c69;
+  color: #0084ff;
 }
 .team-slider h5 {
-    color:#189cf0;
+  color: #ff1654;
 }
 .slick-track {
-    position: relative;
-    top: 0;
-    left: 5.8rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  position: relative;
+  top: 0;
+  left: 5.8rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

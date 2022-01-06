@@ -14,10 +14,10 @@
 }
 
 .notfound-404 h1 {
-    color: #d8d8d8;
-    font-weight: 800;
-    font-size: 200px;
-    margin: 0px;
+  color: #d8d8d8;
+  font-weight: 800;
+  font-size: 200px;
+  margin: 0px;
 }
 
 .notfound h2 {
@@ -40,7 +40,7 @@
   font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
-  background: #189cf0;
+  background: #ff1654;
   display: inline-block;
   padding: 16px 38px;
   border: 2px solid transparent;

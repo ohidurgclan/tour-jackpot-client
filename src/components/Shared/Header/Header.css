@@ -1,5 +1,5 @@
 .header-section {
-  background-color: #031c69;
+  background-color: #0084ff;
   color: #fff;
 }
 
@@ -12,10 +12,10 @@
 .logo span {
   color: #34d1ff;
 }
-.nav-bar { 
+.nav-bar {
   text-decoration: none;
   padding-left: 35px;
-  color: #fff ;
+  color: #fff;
   display: flex;
   align-items: center;
   font-weight: 600;
