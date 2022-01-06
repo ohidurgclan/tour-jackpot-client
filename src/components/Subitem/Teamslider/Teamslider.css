@@ -6,7 +6,7 @@
   height: 15rem;
   width: 15rem;
   border-radius: 50%;
-  border: 7px solid #0084ff;
+  border: 7px solid #218784;
 }
 .team-slider {
   display: flex;
@@ -14,10 +14,10 @@
   justify-content: space-between;
 }
 .team-slider h3 {
-  color: #0084ff;
+  color: #218784;
 }
 .team-slider h5 {
-  color: #ff1654;
+  color: #5c0a3f;
 }
 .slick-track {
   position: relative;

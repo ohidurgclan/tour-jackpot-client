@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import logo from '../../../images/tour-jackpot.png';
 import './Header.css';
 
 const Header = () => {
@@ -10,7 +11,7 @@ const Header = () => {
       <>
         <Navbar className="header-section" collapseOnSelect expand="lg">
           <Container>
-            <Navbar className="logo" as={NavLink} to="/">Tour-<span>Jackpot</span></Navbar>
+            <Navbar className="logo" as={NavLink} to="/">Tour Jackpot</Navbar>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end nav-bar">
               <Nav.Link as={NavLink} to="/home" activeStyle={{ fontWeight: "bold", color: "#34d1ff" }}>Home</Nav.Link>

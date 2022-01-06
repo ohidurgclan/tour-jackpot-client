@@ -1,6 +1,6 @@
 .footer-item {
   height: 80px;
-  background-color: #0084ff;
+  background-color: #218784;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -11,5 +11,5 @@
   font-size: 1rem;
 }
 .footer-txt {
-  color: #ff1654;
+  color: #5c0a3f;
 }

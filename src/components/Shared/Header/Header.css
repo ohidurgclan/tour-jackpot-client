@@ -1,16 +1,12 @@
 .header-section {
-  background-color: #0084ff;
+  background-color: #218784;
   color: #fff;
 }
-
 .logo {
-  color: #fff;
+  color: #5c0a3f;
   font-weight: 700;
   font-size: 35px;
   text-decoration: none;
-}
-.logo span {
-  color: #34d1ff;
 }
 .nav-bar {
   text-decoration: none;
